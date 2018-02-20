@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('inputs', nargs='*', type=str)
+    parser.add_argument('inputs', nargs='+', type=str)
     parser.add_argument('-o', '--output', type=str)
     parser.add_argument('-m', '--min', type=float, default=25)
     parser.add_argument('-M', '--max', type=float, default=250)
@@ -27,6 +27,8 @@ def main():
         base = os.path.basename(fname)
         base = os.path.splitext(base)[0]
         plot = seaborn.kdeplot(df['price_per_bedroom'], label=base)
+        print("median price per bedroom is ", df['price_per_bedroom'].median(),
+              " for ", base)
 
     plt.legend()
     plot.set(xlim=(args.min, args.max))
