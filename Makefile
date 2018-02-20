@@ -5,6 +5,8 @@ YEAR := "2017"
 .PHONY: all
 all: figs/chicago.png figs/toronto.png figs/chicago-toronto.png
 
+.SECONDARY:
+
 data/raw data/merged data/out figs: 
 	mkdir -p data/raw
 	mkdir -p data/merged
