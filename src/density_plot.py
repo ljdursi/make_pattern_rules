@@ -7,10 +7,10 @@ given minimum score.
 import argparse
 import os.path
 import pandas
-import seaborn
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import seaborn
 
 
 def main():
