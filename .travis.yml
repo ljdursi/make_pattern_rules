@@ -5,7 +5,7 @@ python:
   - "3.6"
 install:
   - pip install -r requirements.txt
-  - apt-get install -y curl
+  - sudo apt-get install -y curl
 script:
   - make test
   - cd step_1 && make test
