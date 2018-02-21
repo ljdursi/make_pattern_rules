@@ -12,4 +12,4 @@ script:
   - cd ../step_2 && make all
   - cd ../step_3 && make all
   - cd ../step_4 && make all
-  - cd ../step_5 && make all
+  - cd ../step_5 && make all && make figs/all.png
