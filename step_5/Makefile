@@ -25,7 +25,7 @@ figs/%.png: data/out/%_price_per_bedroom.csv src/density_plot.py | figs
 	./src/density_plot.py $< -o $@
 
 figs/chicago-toronto.png: data/out/chicago_price_per_bedroom.csv data/out/chicago_price_per_bedroom.csv src/density_plot.py | figs
-	./src/density_plot.py data/out/chicago_price_per_bedroom.csv data/out/toronto_price_per_bedroom.csv -o figs/$@
+	./src/density_plot.py data/out/chicago_price_per_bedroom.csv data/out/toronto_price_per_bedroom.csv -o $@
 
 figs/all.png: data/out src/density_plot.py
 	./src/density_plot.py data/out/*.csv -o $@
