@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 Takes an input data frame and outputs the price per bedroom of
 entire apartments (or other unit types, if provided) with a
