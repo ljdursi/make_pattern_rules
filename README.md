@@ -1,5 +1,7 @@
 # Programming Make, part I: Pattern Rules
 
+[![Build Status](https://travis-ci.org/ljdursi/make_pattern_rules.svg?branch=master)](https://travis-ci.org/ljdursi/make_pattern_rules)
+
 A short walk-through of pattern rules in Makefile, targetted at
 people who have a little scripting experience.  Notionally, at this
 point we have:
