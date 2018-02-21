@@ -8,8 +8,8 @@ install:
   - sudo apt-get install -y curl
 script:
   - make test
-  - cd step_1 && make test
-  - cd step_2 && make test
-  - cd step_3 && make test
-  - cd step_4 && make test
-  - cd step_5 && make test
+  - cd step_1 && make all
+  - cd step_2 && make all
+  - cd step_3 && make all
+  - cd step_4 && make all
+  - cd step_5 && make all
