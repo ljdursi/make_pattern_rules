@@ -8,6 +8,7 @@ import argparse
 import os.path
 import pandas
 import seaborn
+import matplotlib
 import matplotlib.pyplot as plt
 
 
@@ -21,6 +22,8 @@ def main():
 
     if type(args.inputs) == str:
         args.inputs = [args.inputs]
+        
+    matplotlib.use('Agg')
 
     dataframes = [(infile, pandas.read_csv(infile)) for infile in args.inputs]
     for fname, df in dataframes:
