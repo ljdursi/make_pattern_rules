@@ -21,5 +21,7 @@ write a function to handle this.  Make is a different sort of language -
 Introduce "%" for patterns and "$*" for the matched stem, and replace
 the single-city figure rules with a single rule:
 
+```
 figs/%.png: data/out/%_price_per_bedroom.csv src/density_plot.py
 	./src/density_plot.py data/out/$*_price_per_bedroom.csv -o figs/$*.png
+```
