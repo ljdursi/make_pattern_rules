@@ -28,11 +28,15 @@ def main():
     for fname, df in dataframes:
         base = os.path.basename(fname)
         base = os.path.splitext(base)[0]
-        plot = seaborn.kdeplot(df['price_per_bedroom'], label=base)
-        print("median price per bedroom is ", df['price_per_bedroom'].median(),
-              " for ", base)
+        cityname = base.split('_')[0]
+        plot = seaborn.kdeplot(df['price_per_bedroom'], label=cityname)
+        print("median price per bedroom is "
+              + str(df['price_per_bedroom'].median())
+              + " for " + cityname)
 
     plt.legend()
+    plt.xlabel('Price Per Bedroom')
+    plt.ylabel('Distribution Density')
     plot.set(xlim=(args.min, args.max))
     plot.get_figure().savefig(args.output)
 
