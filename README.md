@@ -11,6 +11,7 @@ point we have:
 - Gone through the process of translating a bash script into Make in two steps (literally, then breaking out each output-file individually) and seen the advantage of incremental rebuilds; this introduces
     - targets
     - dependencies
+    - order dependencies
     - SECONDARY: for keeping intermediate targets
     - Multi-line commands; each line is run in a different shell
 - Added some canonical targets (clean and all) and introduced PHONY
